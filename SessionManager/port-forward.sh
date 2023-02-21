@@ -5,6 +5,7 @@ RED="\e[31m"
 command -v aws >/dev/null 2>&1 || { echo >&2 "I require AWS CLI but it's not installed.  Aborting."; exit 1; }
 command -v zip >/dev/null 2>&1 || { echo >&2 "I require zip but it's not installed.  Aborting."; exit 1; }
 command -v jq >/dev/null 2>&1 || { echo >&2 "I require jq but it's not installed.  Aborting."; exit 1; }
+command -v session-manager-plugin >/dev/null 2>&1 || { echo >&2 "I require session-manager-plugin but it's not installed. See https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-working-with-install-plugin.html  Aborting."; exit 1; }
 
 IDENTITY=$(aws sts get-caller-identity 2> /dev/null)
 
