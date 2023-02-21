@@ -1,5 +1,9 @@
 # AWS System Session Manager - Usage
 
+## Note!
+
+At a minimum, users needing Session Manager access will need the [AmazonSSMFullAccess](https://us-east-1.console.aws.amazon.com/iam/home#/policies/arn:aws:iam::aws:policy/AmazonSSMFullAccess$jsonEditor) AND [AmazonEC2ReadOnlyAccess](https://us-east-1.console.aws.amazon.com/iam/home#/policies/arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess$serviceLevelSummary) policies attached to their IAM user.
+
 There are two options available to use the AWS System Session Manager to connect to an instance.
 
 ## AWS CLI
