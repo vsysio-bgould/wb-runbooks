@@ -17,6 +17,8 @@ if ((Get-Command "session-manager-plugin" -ErrorAction SilentlyContinue) -eq $nu
     Exit
 }
 
+Write-Host "If there are no profiles listed below, Ctrl-C to exit this script, then run 'aws configure'. Have your AWS Access Key ID and AWS Access Key Secret ready when you run this command."
+Write-Host
 Write-Host "List of AWS CLI profiles"
 Write-Host "------------------------"
 aws configure list-profiles
