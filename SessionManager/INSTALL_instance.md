@@ -2,7 +2,7 @@
 
 ## AWS CLI Session Manager Plugin
 
-If you wish to connect to an EC2 instance using a native SSH client, you must install and configure the AWS CLI utility **and** the AWS System Session Manager plugin.
+If you wish to connect to an EC2 instance using a native SSH client, you must install and configure the AWS CLI utility **and** the AWS System Session Manager plugin on your workstation.
 
 [AWS Documentation - AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)  
 [AWS Documentation - Session Manager Plugin](https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-working-with-install-plugin.html#install-plugin-windows)
