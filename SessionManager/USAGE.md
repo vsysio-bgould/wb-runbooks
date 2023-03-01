@@ -28,3 +28,37 @@ You can connect to a registered instance directly through the AWS Web Console.
 3. Click `Connect` at the top-right.
 4. Select `Session Manager` tab.
 5. Click Connect. 
+
+## Helper Script
+
+A helper script has been written that facilitates the easy setup of tunnels over AWS Session Manager.
+
+**Note that SSH clients are likely to present you with a warning about host key verification. It is safe to disregard this warning (in THIS circumstance only... if you see that warning 'in the wild,' be wary!).**
+
+PuTTY presents a warning on connect, while the OpenSSH CLI client will need `-o StrictHostKeyChecking=no` in its arguments.
+
+### Windows
+
+For Windows, use `port-forward.ps1`. Execute it by opening PowerShell in a terminal, changing to this directory, then entering:
+
+`.\port-forward.ps1`
+
+**Windows may present you with a warning about trusting scripts from the Internet.** It is safe to override the warning in this case (press **R** on your keyboard)
+
+The script allows you to select an AWS credentials profile. It then provides a list of available EC2 instances, allowing you to select one.
+
+Once a selection is made, the script will attempt to forward port 22 on the remote EC2 instance to your localhost at port 2222.
+
+The tunnel will remain open until the terminal is closed.
+
+### OSX/Linux
+
+For OSX/Linux, use `port-forward.sh`. Execute it by opening a terminal, changing to this directory, then running:
+
+`./port-forward.sh`
+
+The script allows you to select an EC2 instance from a list. 
+
+Once a selection is made, the script will attempt to forward port 22 on the remote EC2 instance to your localhost at port 2222.
+
+The tunnel will remain open until the terminal is closed.
