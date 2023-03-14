@@ -142,7 +142,7 @@ else {
 
 Write-Host "(autodetect) IPv4 address: " -NoNewline -ForegroundColor blue
 
-$IPAddress = ((Invoke-WebRequest -URI "http://ifconfig.co" -UserAgent "curl/7.54").Content).TrimEnd("`r?`n")
+$IPAddress = ((Invoke-WebRequest -URI "http://whatismyip.akamai.com" -UserAgent "curl/7.54").Content).TrimEnd("`r?`n")
 
 Write-Host $IPAddress
 
